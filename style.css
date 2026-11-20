@@ -1,0 +1,243 @@
+/* Cores vivas do jogo (variáveis) */
+:root {
+  --fundo: #fff1aa;       /* amarelo */
+  --azul-escuro: #0b0740; /* textos e bordas */
+  --rosa: #ee76b0;
+  --ciano: #3be8ff;
+  --laranja: #ff9f1c;
+  --verde: #178d48;
+  --vermelho: #ff5470;
+  --branco: #ffffff;
+  --tamanho-casa: 36px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--azul-escuro);
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+header {
+  background: var(--rosa);
+  color: var(--branco);
+  text-align: center;
+  padding: 20px 12px;
+  border-bottom: 6px solid var(--azul-escuro);
+}
+
+header h1 {
+  margin: 0 0 6px 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px 12px;
+}
+
+/* ---------- Tabuleiro ---------- */
+.area-jogo {
+  text-align: center;
+}
+
+#tabuleiro {
+  display: grid;
+  grid-template-columns: repeat(15, var(--tamanho-casa));
+  gap: 2px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.casa {
+  position: relative;
+  width: var(--tamanho-casa);
+  height: var(--tamanho-casa);
+}
+
+.casa.vazia {
+  visibility: hidden;
+}
+
+.casa input {
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--azul-escuro);
+  background: var(--branco);
+  color: var(--azul-escuro);
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: inherit;
+  text-transform: uppercase;
+  padding: 6px 0 0 0;
+  cursor: pointer;
+}
+
+.casa .numero {
+  position: absolute;
+  top: 1px;
+  left: 3px;
+  font-size: 0.65rem;
+  font-weight: bold;
+  color: var(--rosa);
+  pointer-events: none;
+}
+
+/* palavra selecionada */
+.casa input.palavra-ativa {
+  background: var(--ciano);
+}
+
+/* casa onde o cursor está */
+.casa input.casa-atual {
+  background: var(--laranja);
+  outline: 3px solid var(--azul-escuro);
+}
+
+/* resultado do botão Conferir */
+.casa input.certa {
+  background: var(--verde);
+}
+
+.casa input.errada {
+  background: var(--vermelho);
+  color: var(--branco);
+}
+
+/* ---------- Botões e contador ---------- */
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--branco);
+  border: 3px solid var(--azul-escuro);
+  border-radius: 10px;
+  padding: 10px 24px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 var(--azul-escuro);
+}
+
+button:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 var(--azul-escuro);
+}
+
+#btn-conferir {
+  background: #00b86b;
+}
+
+#btn-reiniciar {
+  background: var(--rosa);
+}
+
+#contador {
+  display: inline-block;
+  margin: 18px 0 6px 0;
+  padding: 8px 18px;
+  background: var(--azul-escuro);
+  color: var(--ciano);
+  border-radius: 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+#mensagem {
+  margin: 6px 0 0 0;
+  min-height: 1.4em;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* ---------- Pistas ---------- */
+.area-pistas {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 420px;
+  max-width: 100%;
+}
+
+.caixa-pistas {
+  background: var(--branco);
+  border: 3px solid var(--azul-escuro);
+  border-radius: 12px;
+  box-shadow: 5px 5px 0 var(--azul-escuro);
+  padding: 12px 16px;
+}
+
+.caixa-pistas h2 {
+  margin: 0 0 8px 0;
+  color: var(--rosa);
+}
+
+.caixa-pistas ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.caixa-pistas li {
+  padding: 6px 8px;
+  margin-bottom: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  line-height: 1.35;
+}
+
+.caixa-pistas li:hover {
+  background: #d9f9ff;
+}
+
+.caixa-pistas li.pista-ativa {
+  background: var(--ciano);
+}
+
+.caixa-pistas li.certa {
+  background: var(--verde);
+}
+
+.caixa-pistas li.errada {
+  background: var(--vermelho);
+  color: var(--branco);
+}
+
+.caixa-pistas li b {
+  margin-right: 4px;
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 600px) {
+  :root {
+    --tamanho-casa: 21px;
+  }
+  header h1 {
+    font-size: 1.4rem;
+  }
+  .casa input {
+    font-size: 0.9rem;
+    padding: 4px 0 0 0;
+  }
+  .casa .numero {
+    font-size: 0.5rem;
+    left: 1px;
+  }
+}
