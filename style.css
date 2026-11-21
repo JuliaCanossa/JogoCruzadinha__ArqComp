@@ -1,7 +1,6 @@
-/* Cores vivas do jogo (variáveis) */
 :root {
-  --fundo: #fff1aa;       /* amarelo */
-  --azul-escuro: #0b0740; /* textos e bordas */
+  --fundo: #fff1aa;       
+  --azul-escuro: #0b0740; 
   --rosa: #ee76b0;
   --ciano: #3be8ff;
   --laranja: #ff9f1c;
