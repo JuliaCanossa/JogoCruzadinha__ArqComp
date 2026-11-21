@@ -1,6 +1,5 @@
 // ============================================================
 // Cruzadinha de Arquitetura Computacional
-// Só JavaScript puro: variáveis, vetores, objetos, if, for e funções.
 // ============================================================
 
 // ---------- 1) DADOS ----------
@@ -45,9 +44,9 @@ var LINHAS = 17;
 var COLUNAS = 15;
 
 // ---------- 2) VARIÁVEIS GERAIS ----------
-var grade = [];    // grade[l][c] = letra correta da casa ("" se for casa vazia)
-var campos = [];   // campos[l][c] = o <input> da casa (ou null)
-var numeros = [];  // numeros[l][c] = número da pista que começa na casa (0 se não tem)
+var grade = [];    
+var campos = [];   
+var numeros = []; 
 
 var linhaAtual = 0;
 var colunaAtual = 0;
@@ -140,6 +139,7 @@ function numerarCasas() {
       }
     }
   }
+  
   // guarda o número dentro de cada palavra
   for (var i = 0; i < palavras.length; i++) {
     palavras[i].numero = numeros[palavras[i].linha][palavras[i].coluna];
