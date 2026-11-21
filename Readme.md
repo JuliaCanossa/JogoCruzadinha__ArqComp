@@ -1,7 +1,7 @@
 # Contexto
 Você é um desenvolvedor web e professor de Arquitetura Computacional. Vai me
-ajudar a criar um jogo de cruzadinha para a atividade "Cruzadinha de Arquitetura
-Computacional" 
+ajudar a criar um jogo de cruzadinha para a atividade 
+"Cruzadinha de Arquitetura Computacional" 
 
 # Objetivo
 Cruzadinha que roda no navegador para treinar termos de Arquitetura Computacional.
@@ -9,29 +9,47 @@ O jogador lê a pista e descobre a palavra. O jogo será publicado no GitHub
 
 # Palavras (16 termos; usar no mínimo 12 no tabuleiro)
 Termo	Dica no tabuleiro	Casa (resposta)
-CPU	Sou o cérebro do computador: busco, decodifico e executo as instruções	CPU
+CPU	Sou o cérebro do computador: busco, decodifico e executo as instruções CPU
+
 ULA	Faço as contas (soma, subtração) e as comparações lógicas (E, OU, NÃO)	ULA
+
 UC (Unidade de Controle)	Sou o maestro: dito o que cada parte da CPU deve fazer e quando	UC
+
 Registradores	Sou a memória minúscula e velocíssima dentro da CPU	REGISTRADORES
+
 RAM	Sou temporária, mas sem mim nada roda. Perco tudo quando a energia acaba	RAM
+
 Address bus (barramento de endereço)	Eu digo onde está a posição de memória. Só a CPU fala comigo	ADDRESSBUS
+
 Data bus (barramento de dados)	Eu transporto o conteúdo, nos dois sentidos: leitura e escrita	DATABUS
+
 ROM	Sou memória só de leitura e guardo o que não pode se perder, como o boot	ROM
-EEPROM	Posso ser apagada e regravada eletricamente, byte a byte, e não esqueço sem energia	EEPROM
+
+EEPROM	Posso ser apagada e regravada eletricamente, byte a byte, e não esqueço sem energia	EEPROM]
+
 Flash	Sou não volátil e apago em blocos. Guardo o programa do microcontrolador, o pendrive e o SSD	FLASH
+
 Cache	Sou pequena e rápida, e guardo cópias do que a CPU mais usa	CACHE
+
 Memória de massa (armazenamento)	Tenho muito espaço e guardo seus arquivos mesmo desligado: HD, SSD	MEMORIADEMASSA
+
 DMA	Transfiro dados entre memória e periféricos sem incomodar a CPU	DMA
+
 Microcontrolador	Sou um chip único com CPU, memória e periféricos. Estou no Arduino	MICROCONTROLADOR
+
 Dual core	Tenho 2 núcleos de processamento no mesmo chip	DUALCORE
+
 Quad core	Tenho 4 núcleos de processamento no mesmo chip	QUADCORE
+
 Nas casas: maiúsculas, sem acento, sem espaço.
 
 # Regras das pistas
 Não pode conter a resposta, parte dela, nem a sigla por extenso.
   Ex.: a pista de DUALCORE não pode ter "dual" nem "core"; a de DATABUS não pode
   ter "data" nem "bus"; a de MEMORIADEMASSA não pode ter "memória" nem "massa".
+  
 - Correta segundo o e-book (PAIXÃO, 2017) e com uma única resposta possível.
+- 
 - Exemplo (ULA) — Ruim: "Unidade Lógica e Aritmética." Boa: "Parte da CPU que faz
   as contas e as operações lógicas."
 
@@ -73,9 +91,9 @@ Pare ao fim de cada etapa e espere meu "ok" antes de seguir.
 - Mensagens "tipo: descrição curta" com feat, fix, style ou docs.
 - Nada de dados pessoais (RA, e-mail, telefone) nos arquivos.
 - Publicar em GitHub Pages (branch main, pasta / root) e enviar só o link no Moodle.
-c
+
 # CSS
-   - Utilize uma paleta de **cores vivas e vibrantes** (ex: gradientes modernos com tons de roxo, rosa neon, azul elétrico ou amarelo vibrante).
+   - Utilize uma paleta de **cores vivas e vibrantes** .
    - O layout deve ser limpo, centralizado, responsivo e com boa legibilidade (fontes modernas, sombras suaves e bom espaçamento).
 
 # JavaScript (Lógica de Algoritmos - 1º Semestre)
